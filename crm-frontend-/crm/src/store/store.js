@@ -1,10 +1,10 @@
 import { configureStore } from "@reduxjs/toolkit";
-import leadReducer from "./leadSlice";
-import authReducer from "./authSlice";
-import dealReducer from "./dealSlice";
-import ticketReducer from "./ticketSlice";
+import leadReducer from "./LeadSlice";
+import authReducer from "./AuthSlice";
 import companyReducer from "./CompanySlice";
 import dashboardReducer from "./DashboardSlice";
+import dealReducer from "./DealSlice";
+import ticketReducer from "./TicketSlice";
 import notificationReducer from "./notificationSlice";
 import globalSearchReducer from "./globalSearchSlice";
 
