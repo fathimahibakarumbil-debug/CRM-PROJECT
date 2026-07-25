@@ -20,17 +20,20 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/6.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-90kal@=qfwd&qo^o_o73^-4842*7tsm9_b95$2mozwt!9qeb09'
+SECRET_KEY = os.environ.get(
+    "SECRET_KEY",
+    "django-insecure-90kal@=qfwd&qo^o_o73^-4842*7tsm9_b95$2mozwt!9qeb09"
+)
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = os.environ.get("DEBUG", "False") == "True"
+
 
 ALLOWED_HOSTS = [
-      ".onrender.com",
+    ".onrender.com",
     "localhost",
     "127.0.0.1",
 ]
-
 
 # AUTH_USER_MODEL = 'accounts.User'
 
@@ -107,16 +110,26 @@ WSGI_APPLICATION = 'config.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/6.0/ref/settings/#databases
 
+import dj_database_url
+
+
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'crm_backend',
-        'USER': 'postgres',
-        'PASSWORD': 'fk923874695027',
-        'HOST': 'localhost',
-        'PORT': '5432',
-    }
+    "default": dj_database_url.config(
+        default="sqlite:///db.sqlite3",
+        conn_max_age=600,
+    )
 }
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'crm_backend',
+#         'USER': 'postgres',
+#         'PASSWORD': 'fk923874695027',
+#         'HOST': 'localhost',
+#         'PORT': '5432',
+#     }
+# }
 
 # Password validation
 # https://docs.djangoproject.com/en/6.0/ref/settings/#auth-password-validators
@@ -159,3 +172,6 @@ STATIC_ROOT = BASE_DIR / "staticfiles"
 
 MEDIA_URL = "/media/"
 MEDIA_ROOT = BASE_DIR / "media"
+
+
+
