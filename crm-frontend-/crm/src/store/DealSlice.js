@@ -1,6 +1,6 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import * as DealService from "../services/DealService";
-import { convertLeadApi } from "../services/LeadService";
+import { convertLeadApi } from "../services/leadService";
 // ================= THUNKS =================
 
 // GET ALL DEALS
