@@ -6,7 +6,7 @@
   import DataTable from "../../components/listPage/DataTable";
   import CreateEditDrawer from "../../components/listPage/drawers/CreateEditDrawer";
   import ConfirmationDialog from "../../components/common/ConfirmationDialog";
-  import AppSnackbar from "../../components/common/AppSnackBar";
+  import AppSnackbar from "../../components/common/AppSnackbar";
 
   import {
     fetchTickets,
