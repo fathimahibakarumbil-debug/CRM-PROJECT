@@ -13,7 +13,7 @@ import {
 } from "@mui/material";
 import NotificationsNoneIcon from "@mui/icons-material/NotificationsNone";
 import { useSelector, useDispatch } from "react-redux";
-import { logout } from "../../store/authSlice";
+import { logout } from "../../store/AuthSlice";
 import { useNavigate } from "react-router-dom";
 import { getNotifications } from "../../store/notificationSlice";
 import SearchIcon from "@mui/icons-material/Search";

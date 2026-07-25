@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { forgotPassword, clearAuthError } from "../../store/authSlice";
+import { forgotPassword, clearAuthError } from "../../store/AuthSlice";
 import { useNavigate, Link as RouterLink } from "react-router-dom";
 import {
   Box,
