@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import AppSnackbar from "../../components/common/AppSnackbar";
-import { registerUser } from "../../store/authSlice";
+import { registerUser } from "../../store/AuthSlice";
 import {
   Box,
   Button,
